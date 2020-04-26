@@ -48,3 +48,7 @@ hamilton.power_source = "bakłażan"
 print(kenwood.power_source)
 print(hamilton.power_source)
 print(kenwood.power_source)
+
+print(Kettle.__dict__)
+print(kenwood.__dict__)
+print(hamilton.__dict__)
