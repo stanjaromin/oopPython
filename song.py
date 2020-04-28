@@ -17,7 +17,7 @@ class Album:
     """ Class to represent an Album, using it's track list
 
     Attributes:
-        album_name (str): The name of the album.
+        name (str): The name of the album.
         year (int): The year was album was released.
         artist: (Artist): The artist responsible for the album. If not specified,
         the artist will default to an artist with the name "Various Artists".
