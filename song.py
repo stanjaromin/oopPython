@@ -51,3 +51,46 @@ class Album:
         else:
             self.tracks.insert(position, song)
 
+
+class Artist:
+    """Basic class to store artist details.
+
+    Attributes:
+        name (str): The name of the artist.
+        albums (List[Album]): A list of the albums by this artist.
+            The list includes only those albums in this collection, it is
+            not an exhaustive list of the artist's published albums.
+
+    Methods:
+        add_album: Use to add a new album to the artist's albums list
+    """
+
+    def __init__(self, name):
+        self.name = name
+        self.albums = []
+
+    def add_album(self, album):
+        """Add a new album to the list.
+
+        Args:
+            album (Album): Album object to add to the list.
+                If the album is already present, it will not added again (although this is yet to implemented).
+        """
+        self.albums.append(album)
+
+
+def load_data():
+    new_artist = None
+    new_album = None
+    artist_list = []
+
+    with open("albums.txt", "r") as albums:
+        for line in albums:
+            # data row should consist of (artist, album, year, song)
+            artist_field, album_field, year_field, song_field = tuple(line.strip('\n').split('\t'))
+            year_field = int(year_field)
+            print(artist_field, album_field, year_field, song_field)
+
+
+if __name__ == '__main__':
+    load_data()
