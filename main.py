@@ -15,6 +15,10 @@ print(tim)
 
 tim.lives -= 1
 print(tim)
+
+tim._lives -= 9
+print(tim)
+
 #print(tim.get_name())
 #tim.set_lives(300)
 
